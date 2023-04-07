@@ -33,7 +33,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 image = cv2.imread("butterfly (1).jpg")
 original_image = cv2.cvtColor(image,cv2.COLOR_BGR2RGB)
-### 1. Smoothing Filters
+1. Smoothing Filters
 
 i) Using Averaging Filter
 kernel1 = np.ones((11,11),np.float32)/121
@@ -85,7 +85,7 @@ plt.imshow(median)
 plt.title("Filtered")
 plt.axis("off")
 
-### 2. Sharpening Filters
+2. Sharpening Filters
 i) Using Laplacian Kernal
 kernel3 = np.array([[0,1,0],[1,-4,1],[0,1,0]])
 laplacian_kernel = cv2.filter2D(original_image,-1,kernel3)
@@ -115,23 +115,31 @@ plt.axis("off")
 
 ## OUTPUT:
 ### 1. Smoothing Filters
+
 i) Using Averaging Filter
+
 ![pic1](https://user-images.githubusercontent.com/93427253/230601121-8289d3fb-cb39-4ba3-a38b-65c6b6f84efd.png)
 
 ii) Using Weighted Averaging Filter
+
 ![pic2](https://user-images.githubusercontent.com/93427253/230601131-ea08a4c2-1d8e-4bab-9e79-a93e8751f5c0.png)
 
 iii) Using Gaussian Filter
+
 ![pic3](https://user-images.githubusercontent.com/93427253/230601146-7cf04958-e9b6-4568-bd8f-55f60cbe2bdd.png)
 
 iv) Using Median Filter
+
 ![pic4](https://user-images.githubusercontent.com/93427253/230601160-5948286c-cf90-429a-934c-99b987d2468b.png)
 
 ### 2. Sharpening Filters
+
 i) Using Laplacian Kernal
+
 ![pic5](https://user-images.githubusercontent.com/93427253/230601252-73ffe4ca-b62f-4267-9ae2-9c9e90a387fd.png)
 
 ii) Using Laplacian Operator
+
 ![pic6](https://user-images.githubusercontent.com/93427253/230601266-8008f851-be2e-4e2a-abee-6e7061ce2cd4.png)
 
 ## Result:
